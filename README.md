@@ -25,7 +25,7 @@ Each clinic is scored across 6 categories with user-adjustable weights:
 
 ### Gender-Aware Filtering
 
-- **Female-only clinics** (e.g., 포유문산부인과) are excluded from male user rankings
+- **Female-only clinics** Some clinics are excluded from male user rankings
 - **Male-only STI tests** (e.g., gonorrhea testing at certain public health centers) reduce the effective STI count for female users
 - This was discovered during data collection and reflects real-world access constraints
 
