@@ -1,4 +1,4 @@
-# AfterPatch+ Privacy Scorecard
+# Aftersun Privacy Scorecard
 
 > A weighted scoring algorithm that ranks STI testing clinics by privacy, clinical capability, cost, accessibility, and medication availability — personalized to each user's priorities and gender.
 
