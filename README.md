@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 # Aftersun: Synthetic Clinic Data Generation
-=======
-# Aftersun Privacy Scorecard
->>>>>>> 3b0bea597bc0408529d4efbb8f8925a786fcfaf9
 
 A pipeline that expands 18 real STI testing clinics in Seoul into 500 synthetic 
 clinics, preserving the statistical properties and domain relationships of the 
@@ -37,13 +33,7 @@ Three generation strategies(Statistical, Proportional, Domain-based) are used de
   endpoints rather than averaging, avoiding invented values.
 - **Reproducibility:** Fixed random seed(n=42) ensures identical output on every run.
 
-<<<<<<< HEAD
 ## Limitations & Future Development
-=======
-- **Female-only clinics** Some clinics are excluded from male user rankings
-- **Male-only STI tests** (e.g., gonorrhea testing at certain public health centers) reduce the effective STI count for female users
-- This was discovered during data collection and reflects real-world access constraints
->>>>>>> 3b0bea597bc0408529d4efbb8f8925a786fcfaf9
 
 - Small source sample (n=18); per-type samples are smaller still (OB-GYN: n=3).
 - **Sampling bias:** larger hospitals are over-represented, which may inflate 
