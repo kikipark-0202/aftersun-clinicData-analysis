@@ -1,4 +1,4 @@
-# Aftersun: Synthetic Clinic Data Generation
+# 📊 Aftersun: Synthetic Clinic Data Generation
 
 A pipeline that expands 18 real STI testing clinics in Seoul into 500 synthetic 
 clinics, preserving the statistical properties and domain relationships of the 
@@ -7,13 +7,13 @@ original data.
 **What I focused:** Addressing the small-sample limitation(n=18) of privacy-sensitive 
 healthcare data.
 
-## Problem
+## 🏥 Problem
 
 Real data on STI testing clinics is mmostly privacy-sensitive. With only 18 
 real clinics, meaningful statistical analysis or ML is not feasible. This project 
 generates a larger synthetic dataset that preserves the original's structure.
 
-## Approach
+## 🚀 Approach
 
 Each attribute is generated **conditionally on clinic type**, avoiding 
 contradictions like a "free public health center priced at 80,000 KRW."
@@ -23,7 +23,7 @@ Three generation strategies(Statistical, Proportional, Domain-based) are used de
 2. Proportional(`anonymity`, `weekend hours`, `online booking`): Sampled by each type's observed proportions
 3. Domain-based(`STI count`): Verified domain knowledge
 
-## Key Decisions
+## 👨🏻‍💻 Key Decisions
 
 - **Domain constraints over raw data:** STI counts were inconsistently recorded 
   in the source (often blank while test types were listed in detail). Rather than 
@@ -33,6 +33,7 @@ Three generation strategies(Statistical, Proportional, Domain-based) are used de
   endpoints rather than averaging, avoiding invented values.
 - **Reproducibility:** Fixed random seed(n=42) ensures identical output on every run.
 
+<<<<<<< HEAD
 ## Clustering: Validating Structrue Preservation
 
 **K-Means clustering** (k=4, selected via elbow method) recovered four interpretable segments:
@@ -47,6 +48,9 @@ Three generation strategies(Statistical, Proportional, Domain-based) are used de
 **Interpretation:** Since this is synthetic data, clustering does not reveal new market facts. It actually confirms that the conditional generation logic is preserved in the output. The 18.2% of the privacy-focused segment (18.2%) is the arithmetic product of two generation parameters: P(urology) × P(anonymous | urology) = 0.444 × 0.4 = approx. 0.178. This estimate ultimately rests on 2 of 5 real urology clinics, so the confidence interval is wide.
 
 ## Limitations & Future Development
+=======
+## 📝 Limitations & Future Development
+>>>>>>> 94bc9c0996ed1798b50a4a117fa19d1c8c006ed3
 
 - Small source sample (n=18); per-type samples are smaller still (OB-GYN: n=3).
 - **Sampling bias:** larger hospitals are over-represented, which may inflate 
