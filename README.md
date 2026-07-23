@@ -33,7 +33,7 @@ Three generation strategies(Statistical, Proportional, Domain-based) are used de
   endpoints rather than averaging, avoiding invented values.
 - **Reproducibility:** Fixed random seed(n=42) ensures identical output on every run.
 
-## Clustering: Validating Structrue Preservation
+## 💻 Clustering: Validating Structrue Preservation
 
 **K-Means clustering** (k=4, selected via elbow method) recovered four interpretable segments:
 
