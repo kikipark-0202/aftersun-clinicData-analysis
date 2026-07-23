@@ -33,7 +33,6 @@ Three generation strategies(Statistical, Proportional, Domain-based) are used de
   endpoints rather than averaging, avoiding invented values.
 - **Reproducibility:** Fixed random seed(n=42) ensures identical output on every run.
 
-<<<<<<< HEAD
 ## Clustering: Validating Structrue Preservation
 
 **K-Means clustering** (k=4, selected via elbow method) recovered four interpretable segments:
@@ -47,10 +46,8 @@ Three generation strategies(Statistical, Proportional, Domain-based) are used de
 
 **Interpretation:** Since this is synthetic data, clustering does not reveal new market facts. It actually confirms that the conditional generation logic is preserved in the output. The 18.2% of the privacy-focused segment (18.2%) is the arithmetic product of two generation parameters: P(urology) × P(anonymous | urology) = 0.444 × 0.4 = approx. 0.178. This estimate ultimately rests on 2 of 5 real urology clinics, so the confidence interval is wide.
 
-## Limitations & Future Development
-=======
+
 ## 📝 Limitations & Future Development
->>>>>>> 94bc9c0996ed1798b50a4a117fa19d1c8c006ed3
 
 - Small source sample (n=18); per-type samples are smaller still (OB-GYN: n=3).
 - **Sampling bias:** larger hospitals are over-represented, which may inflate 
