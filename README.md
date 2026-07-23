@@ -33,6 +33,19 @@ Three generation strategies(Statistical, Proportional, Domain-based) are used de
   endpoints rather than averaging, avoiding invented values.
 - **Reproducibility:** Fixed random seed(n=42) ensures identical output on every run.
 
+## Clustering: Validating Structrue Preservation
+
+**K-Means clustering** (k=4, selected via elbow method) recovered four interpretable segments:
+
+- **Public Health Center(n = 166):** Free | HIV only Anonymity | 3 STIs + HIV | Weekdays only | 8 days till the Result
+- **Standard Private Clinic(n = 130):** Mid-ranged Price | Zero Anonymity | 12 STIs + HIV | Weekdays + (Weekends) | 4 days till the Result
+- **Premium with High Accessiblity Clinic(n=113):** High-ranged Price | Zero Anonymity | 12 STIs + HIV | Weekdays + Weekends | 3 days till the Result
+- **Privacy-focused Clinic(n=91):** Mid-ranged Price | High Anonymity | 12 STIs + HIV | Weekdays + (Weekends) | 4 days till the Result
+
+**Why I chose k to be 4:** Inertia flattens after k=4 (Δ 380 → 120), and this is the first resolution at which the privacy-focused segment started to separate. At k≥6, clusters split along price alone, producing combinations (e.g. low-price + weekend hours) that reflect data noise rather than structure, since price and weekend availability are generated independently within each clinic type!
+
+**Interpretation:** Since this is synthetic data, clustering does not reveal new market facts. It actually confirms that the conditional generation logic is preserved in the output. The 18.2% of the privacy-focused segment (18.2%) is the arithmetic product of two generation parameters: P(urology) × P(anonymous | urology) = 0.444 × 0.4 = approx. 0.178. This estimate ultimately rests on 2 of 5 real urology clinics, so the confidence interval is wide.
+
 ## Limitations & Future Development
 
 - Small source sample (n=18); per-type samples are smaller still (OB-GYN: n=3).
